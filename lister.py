@@ -11,7 +11,7 @@ list= glob.glob("*.mp4")
 
 for items in list:
     mp3=items.replace(".mp4", ".mp3")
-    command="ffmpeg -i \""+items+"\"  \""+mp3+"\""
+    command="ffmpeg -n -i \""+items+"\"  \""+mp3+"\""
     print("****** EXECUTING:" + command)
     os.system(command)
     #ffmpeg -i input.mp4 output.avi
